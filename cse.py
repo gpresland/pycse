@@ -72,20 +72,6 @@ def getChart(ticker):
             change: -0.03,
             tradetimestamp: 1476734172
         },
-        {
-            security_moniker: "2015-12-31:BE",
-            date: "2016-10-19T00:00:00.000Z",
-            time: "15:59:04.417000",
-            volume: 1000,
-            price: 1.03,
-            buy_dealer: "W.D. Latimer Co. Limited",
-            sell_dealer: "RBC Capital Markets",
-            tick: -0.01,
-            trade_or_quote_id: "140016061",
-            value: "1030",
-            change: -0.11,
-            tradetimestamp: 1476907144
-        }
     ]
     """
     return getJson(URL_CHART, ticker)
@@ -103,14 +89,6 @@ def getDepth(ticker):
             Ask Size: "22,700",
             Ask Dealer: "TD Securities Inc."
         },
-        {
-            Bid Dealer: "W.D. Latimer Co. Limited",
-            Bid Size: "1,000",
-            Bid Price: "1.810",
-            Ask Price: "1.830",
-            Ask Size: "5,000",
-            Ask Dealer: "TD Securities Inc."
-        }
     ]
     """
     return getJson(URL_DEPTH, ticker)
@@ -128,14 +106,6 @@ def getDepthPrice(ticker):
             Ask Size: "33,100",
             Ask Count: "4"
         },
-        {
-            Bid Count: "5",
-            Bid Size: "21,500",
-            Bid Price: "1.800",
-            Ask Price: "1.840",
-            Ask Size: "32,000",
-            Ask Count: "2"
-        }
     ]
     """
     return getJson(URL_DEPTH_PRICE, ticker)
@@ -165,7 +135,7 @@ def getHistories(ticker):
             trading_value: 243046.71,
             trading_value_cad: 243046.71,
             id: 256221
-        }
+        },
     ]
     """
     return getJson(URL_HISTORIES, ticker)
@@ -196,20 +166,6 @@ def getLastTrades(ticker):
             change: -0.04,
             timestamp: 1507924427000
         },
-        {
-            security_moniker: "2015-12-31:BE",
-            date: "2017-10-13T00:00:00.000Z",
-            time: "15:50:59.207000",
-            volume: 200,
-            price: 1.83,
-            buy_dealer: "Questrade Inc.",
-            sell_dealer: "TD Securities Inc.",
-            tick: 0.01,
-            trade_or_quote_id: "764713765",
-            value: "366",
-            change: -0.02,
-            timestamp: 1507924259000
-        }
     ]
     """
     return getJson(URL_LAST_TRADES, ticker)
